@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLINTON  - Digital Designer & Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    Navigation
+    <nav class="nav" id="nav">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="#home">CLINTON </a>
+                <span class="nav-subtitle">Digital Designer & Developer</span>
+            </div>
+            <div class="nav-links">
+                <a href="#work" class="nav-link">Work</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-background">
+            <div class="hero-bg-image"></div>
+            <div class="hero-gradient-overlay"></div>
+        </div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    Available for new projects
+                </div>
+                <div class="hero-greeting">Hello, I'm CLINTON 👋</div>
+                <h1 class="hero-title">
+                    <span class="title-line">Creative</span>
+                    <span class="title-line highlight-text">Designer</span>
+                    <span class="title-line">& Developer</span>
+                </h1>
+                <p class="hero-description">
+                    I craft beautiful digital experiences that blend thoughtful design with robust engineering. 
+                    Specializing in modern web applications, design systems, and user-centered solutions.
+                </p>
+                <div class="hero-actions">
+                    <a href="#work" class="btn btn-primary">
+                        <span>View My Work</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                        </svg>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <span>Get In Touch</span>
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Projects Completed</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">5+</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">25+</span>
+                        <span class="stat-label">Happy Clients</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-image-container">
+                    <div class="hero-main-image">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=600&fit=crop&crop=face" alt="CLINTON " class="profile-image">
+                        <div class="image-decoration"></div>
+                    </div>
+                    <div class="floating-cards">
+                        <div class="floating-card card-1">
+                            <div class="card-icon">🎨</div>
+                            <span>Design</span>
+                        </div>
+                        <div class="floating-card card-2">
+                            <div class="card-icon">💻</div>
+                            <span>Development</span>
+                        </div>
+                        <div class="floating-card card-3">
+                            <div class="card-icon">⚡</div>
+                            <span>Performance</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="scroll-indicator-wrapper">
+                    <div class="scroll-text">Scroll to explore</div>
+                    <div class="scroll-indicator"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Section -->
+    <section class="work" id="work">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-title-wrapper">
+                    <h2>Selected Work</h2>
+                    <p class="section-subtitle">A collection of projects that showcase my expertise in design and development</p>
+                </div>
+                <div class="work-nav">
+                    <button class="work-nav-btn active" data-filter="all">
+                        <span>All</span>
+                        <span class="count">6</span>
+                    </button>
+                    <button class="work-nav-btn" data-filter="web">
+                        <span>Web</span>
+                        <span class="count">4</span>
+                    </button>
+                    <button class="work-nav-btn" data-filter="mobile">
+                        <span>Mobile</span>
+                        <span class="count">1</span>
+                    </button>
+                    <button class="work-nav-btn" data-filter="branding">
+                        <span>Branding</span>
+                        <span class="count">1</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="work-grid">
+                <article class="work-card" data-category="web">
+                    <div class="work-image">
+                        <img src="https://images.unsplash.com/photo-1512486130939-2c4f79935e4f?w=600&q=80" alt="Timeline Health App">
+                        <div class="work-overlay">
+                            <div class="overlay-content">
+                                <button class="view-project-btn">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                                    </svg>
+                                    View Project
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="work-content">
+                        <div class="work-header">
+                            <h3>Timeline Health</h3>
+                            <div class="project-year">2024</div>
+                        </div>
+                        <p class="work-description">Building a seamless path to better cellular health through intuitive design and robust development.</p>
+                        <div class="work-tags">
+                            <span class="tag">Design</span>
+                            <span class="tag">Frontend</span>
+                            <span class="tag">React</span>
+                        </div>
+                        <div class="work-metrics">
+                            <div class="metric">
+                                <span class="metric-value">40%</span>
+                                <span class="metric-label">Conversion ↑</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">2.5s</span>
+                                <span class="metric-label">Load Time</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="work-card" data-category="mobile">
+                    <div class="work-image">
+                        <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?w=600&q=80" alt="Siesta Campers App">
+                        <div class="work-overlay">
+                            <div class="overlay-content">
+                                <button class="view-project-btn">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                                    </svg>
+                                    View Project
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="work-content">
+                        <div class="work-header">
+                            <h3>Siesta Campers</h3>
+                            <div class="project-year">2024</div>
+                        </div>
+                        <p class="work-description">Elevating Portugal's premier van rental company with a mobile-first booking experience.</p>
+                        <div class="work-tags">
+                            <span class="tag">Design</span>
+                            <span class="tag">Mobile</span>
+                            <span class="tag">React Native</span>
+                        </div>
+                        <div class="work-metrics">
+                            <div class="metric">
+                                <span class="metric-value">60%</span>
+                                <span class="metric-label">Bookings ↑</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">4.8★</span>
+                                <span class="metric-label">App Rating</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="work-card" data-category="web">
+                    <div class="work-image">
+                        <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=600&q=80" alt="Dr. Julia Woehr Portfolio">
+                        <div class="work-overlay">
+                            <div class="overlay-content">
+                                <button class="view-project-btn">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                                    </svg>
+                                    View Project
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="work-content">
+                        <div class="work-header">
+                            <h3>Dr. Julia Woehr</h3>
+                            <div class="project-year">2023</div>
+                        </div>
+                        <p class="work-description">Distilling architectural impact to its spatial essence through minimalist web design.</p>
+                        <div class="work-tags">
+                            <span class="tag">Design</span>
+                            <span class="tag">Development</span>
+                            <span class="tag">Next.js</span>
+                        </div>
+                        <div class="work-metrics">
+                            <div class="metric">
+                                <span class="metric-value">95</span>
+                                <span class="metric-label">Lighthouse</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">1.2s</span>
+                                <span class="metric-label">Load Time</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="work-card" data-category="branding">
+                    <div class="work-image">
+                        <img src="https://images.unsplash.com/photo-1541462608143-67571c6738dd?w=600&q=80" alt="Fluid Superscripts">
+                        <div class="work-overlay">
+                            <div class="overlay-content">
+                                <button class="view-project-btn">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                                    </svg>
+                                    View Project
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="work-content">
+                        <div class="work-header">
+                            <h3>Fluid Superscripts</h3>
+                            <div class="project-year">2023</div>
+                        </div>
+                        <p class="work-description">Accomplishing interactive design demos with fluid typography and smooth animations.</p>
+                        <div class="work-tags">
+                            <span class="tag">Typography</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">Animation</span>
+                        </div>
+                        <div class="work-metrics">
+                            <div class="metric">
+                                <span class="metric-value">10k+</span>
+                                <span class="metric-label">Views</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">500+</span>
+                                <span class="metric-label">Likes</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="work-card" data-category="web">
+                    <div class="work-image">
+                        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=600&q=80" alt="Fireworks Visualization">
+                        <div class="work-overlay">
+                            <div class="overlay-content">
+                                <button class="view-project-btn">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                                    </svg>
+                                    View Project
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="work-content">
+                        <div class="work-header">
+                            <h3>Fireworks</h3>
+                            <div class="project-year">2023</div>
+                        </div>
+                        <p class="work-description">Interactive data visualization celebrating the art of deleting unnecessary design layers.</p>
+                        <div class="work-tags">
+                            <span class="tag">Data Viz</span>
+                            <span class="tag">D3.js</span>
+                            <span class="tag">WebGL</span>
+                        </div>
+                        <div class="work-metrics">
+                            <div class="metric">
+                                <span class="metric-value">60fps</span>
+                                <span class="metric-label">Performance</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">5k+</span>
+                                <span class="metric-label">Interactions</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="work-card" data-category="web">
+                    <div class="work-image">
+                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&q=80" alt="Adaptive Precision">
+                        <div class="work-overlay">
+                            <div class="overlay-content">
+                                <button class="view-project-btn">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                                    </svg>
+                                    View Project
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="work-content">
+                        <div class="work-header">
+                            <h3>Adaptive Precision</h3>
+                            <div class="project-year">2022</div>
+                        </div>
+                        <p class="work-description">Open source implementation of Klaus Freiburg's innovative web experiment.</p>
+                        <div class="work-tags">
+                            <span class="tag">Open Source</span>
+                            <span class="tag">Vue.js</span>
+                            <span class="tag">WebGL</span>
+                        </div>
+                        <div class="work-metrics">
+                            <div class="metric">
+                                <span class="metric-value">200+</span>
+                                <span class="metric-label">GitHub ★</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">15k+</span>
+                                <span class="metric-label">Downloads</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-main">
+                    <div class="about-header">
+                        <h2>About Me</h2>
+                        <p class="about-intro">Passionate about crafting accessible, pixel-perfect user interfaces that blend thoughtful design with robust engineering.</p>
+                    </div>
+                    
+                    <div class="about-description">
+                        <p>I'm a developer who thrives at the intersection of design and development, creating experiences that not only look great but are meticulously built for performance and usability. My approach combines aesthetic sensibility with technical precision.</p>
+
+                        <p>Currently, I'm a Senior Designer & Developer at <strong>Studio Craft</strong>, specializing in digital experiences. I contribute to the creation and maintenance of design systems that power modern web applications, ensuring our platforms meet accessibility standards and best practices.</p>
+
+                        <p>In my spare time, I'm usually climbing, reading, hanging out with my wife and two cats, or running around searching for the perfect coffee beans ☕</p>
+                    </div>
+
+                    <div class="skills-section">
+                        <h3>Skills & Expertise</h3>
+                        <div class="skills-grid">
+                            <div class="skill-category">
+                                <div class="category-icon">🎨</div>
+                                <h4>Design</h4>
+                                <div class="skill-list">
+                                    <span class="skill-item">UI/UX Design</span>
+                                    <span class="skill-item">Design Systems</span>
+                                    <span class="skill-item">Figma</span>
+                                    <span class="skill-item">Prototyping</span>
+                                </div>
+                            </div>
+                            <div class="skill-category">
+                                <div class="category-icon">⚡</div>
+                                <h4>Frontend</h4>
+                                <div class="skill-list">
+                                    <span class="skill-item">React</span>
+                                    <span class="skill-item">Next.js</span>
+                                    <span class="skill-item">TypeScript</span>
+                                    <span class="skill-item">Vue.js</span>
+                                </div>
+                            </div>
+                            <div class="skill-category">
+                                <div class="category-icon">🛠️</div>
+                                <h4>Tools</h4>
+                                <div class="skill-list">
+                                    <span class="skill-item">Git</span>
+                                    <span class="skill-item">Webpack</span>
+                                    <span class="skill-item">Docker</span>
+                                    <span class="skill-item">AWS</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-experience">
+                    <h3>Experience</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-period">2024 — Present</div>
+                                <div class="timeline-details">
+                                    <h4>Senior Designer & Developer</h4>
+                                    <div class="company">Studio Craft</div>
+                                    <p>Build and maintain critical components used to construct modern web applications. Work closely with cross-functional teams to implement best practices in web accessibility and performance.</p>
+                                    <div class="achievement-list">
+                                        <div class="achievement">
+                                            <span class="achievement-metric">40%</span>
+                                            <span class="achievement-desc">Performance improvement across products</span>
+                                        </div>
+                                        <div class="achievement">
+                                            <span class="achievement-metric">15+</span>
+                                            <span class="achievement-desc">Component library contributions</span>
+                                        </div>
+                                    </div>
+                                    <div class="tech-stack">
+                                        <span class="tech-item">React</span>
+                                        <span class="tech-item">TypeScript</span>
+                                        <span class="tech-item">Next.js</span>
+                                        <span class="tech-item">Figma</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-period">2022 — 2024</div>
+                                <div class="timeline-details">
+                                    <h4>Lead Frontend Developer</h4>
+                                    <div class="company">Pixel Studios</div>
+                                    <p>Led frontend development for multiple client projects, focusing on performance optimization and user experience. Established coding standards for the development team.</p>
+                                    <div class="achievement-list">
+                                        <div class="achievement">
+                                            <span class="achievement-metric">25+</span>
+                                            <span class="achievement-desc">Client projects delivered</span>
+                                        </div>
+                                        <div class="achievement">
+                                            <span class="achievement-metric">60%</span>
+                                            <span class="achievement-desc">Faster development cycles</span>
+                                        </div>
+                                    </div>
+                                    <div class="tech-stack">
+                                        <span class="tech-item">Vue.js</span>
+                                        <span class="tech-item">React</span>
+                                        <span class="tech-item">SCSS</span>
+                                        <span class="tech-item">Node.js</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-period">2020 — 2022</div>
+                                <div class="timeline-details">
+                                    <h4>Full Stack Developer</h4>
+                                    <div class="company">Digital Innovations</div>
+                                    <p>Developed end-to-end web applications for startups and established companies. Created responsive designs and optimized database performance.</p>
+                                    <div class="achievement-list">
+                                        <div class="achievement">
+                                            <span class="achievement-metric">10+</span>
+                                            <span class="achievement-desc">Full-stack applications built</span>
+                                        </div>
+                                        <div class="achievement">
+                                            <span class="achievement-metric">95%</span>
+                                            <span class="achievement-desc">Client satisfaction rate</span>
+                                        </div>
+                                    </div>
+                                    <div class="tech-stack">
+                                        <span class="tech-item">JavaScript</span>
+                                        <span class="tech-item">Python</span>
+                                        <span class="tech-item">PostgreSQL</span>
+                                        <span class="tech-item">AWS</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-text">
+                    <h2>Let's work together</h2>
+                    <p>If you would like to discuss a project or just say hi, I'm always down to chat.</p>
+                    <div class="contact-links">
+                        <a href="mailto:hello@CLINTON.com" class="contact-link">
+                            <span>Email</span>
+                            <span>hello@CLINTON.com</span>
+                        </a>
+                        <div class="social-links">
+                            <a href="#" class="social-link">LinkedIn</a>
+                            <a href="#" class="social-link">Instagram</a>
+                            <a href="#" class="social-link">GitHub</a>
+                            <a href="#" class="social-link">Dribbble</a>
+                            <a href="#" class="social-link">X</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2025. Crafted by CLINTON </p>
+                    <div class="footer-links">
+                        <a href="#">Sitemap</a>
+                        <a href="#">Privacy Policy</a>
+                    </div>
+                </div>
+                <div class="footer-signature">
+                    <div class="signature">AM</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
