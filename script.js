@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Work filter functionality
     const filterButtons = document.querySelectorAll('.work-nav-btn');
-    const workCards = document.querySelectorAll('.work-card');
+    const workItems = document.querySelectorAll('.work-item');
 
     filterButtons.forEach(button => {
         button.addEventListener('click', function () {
@@ -58,25 +58,15 @@ document.addEventListener('DOMContentLoaded', function () {
             filterButtons.forEach(btn => btn.classList.remove('active'));
             this.classList.add('active');
 
-            // Filter work cards with smooth animation
-            workCards.forEach((card, index) => {
-                const category = card.getAttribute('data-category');
+            // Filter work items
+            workItems.forEach(item => {
+                const category = item.getAttribute('data-category');
 
                 if (filter === 'all' || category === filter) {
-                    card.style.display = 'block';
-                    card.style.opacity = '0';
-                    card.style.transform = 'translateY(20px)';
-                    
-                    setTimeout(() => {
-                        card.style.opacity = '1';
-                        card.style.transform = 'translateY(0)';
-                    }, index * 100);
+                    item.style.display = 'block';
+                    item.style.animation = 'fadeInUp 0.6s ease-out forwards';
                 } else {
-                    card.style.opacity = '0';
-                    card.style.transform = 'translateY(-20px)';
-                    setTimeout(() => {
-                        card.style.display = 'none';
-                    }, 300);
+                    item.style.display = 'none';
                 }
             });
         });
@@ -92,29 +82,12 @@ document.addEventListener('DOMContentLoaded', function () {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('animate');
-                
-                // Special handling for skill categories
-                if (entry.target.classList.contains('skill-category')) {
-                    const items = entry.target.querySelectorAll('.skill-item');
-                    items.forEach((item, index) => {
-                        setTimeout(() => {
-                            item.style.opacity = '1';
-                            item.style.transform = 'translateY(0)';
-                        }, index * 100);
-                    });
-                }
-                
-                // Special handling for timeline items
-                if (entry.target.classList.contains('timeline-item')) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateX(0)';
-                }
             }
         });
     }, observerOptions);
 
     // Observe elements for animation
-    document.querySelectorAll('.work-card, .skill-category, .timeline-item, .about-content, .contact-content').forEach(el => {
+    document.querySelectorAll('.work-item, .about-content, .contact-content').forEach(el => {
         observer.observe(el);
     });
 
@@ -152,25 +125,18 @@ document.addEventListener('DOMContentLoaded', function () {
         }, 2000);
     });
 
-    // Parallax effect for floating cards and elements
-    const floatingCards = document.querySelectorAll('.floating-card');
-    const imageDecoration = document.querySelector('.image-decoration');
+    // Parallax effect for floating elements
+    const floatingElements = document.querySelectorAll('.element');
 
-    window.addEventListener('scroll', throttle(function () {
+    window.addEventListener('scroll', function () {
         const scrolled = window.pageYOffset;
-        const rate = scrolled * -0.3;
+        const rate = scrolled * -0.5;
 
-        // Animate floating cards
-        floatingCards.forEach((card, index) => {
-            const speed = (index + 1) * 0.2;
-            card.style.transform = `translateY(${rate * speed}px)`;
+        floatingElements.forEach((element, index) => {
+            const speed = (index + 1) * 0.3;
+            element.style.transform = `translateY(${rate * speed}px)`;
         });
-
-        // Animate image decoration
-        if (imageDecoration) {
-            imageDecoration.style.transform = `translateY(${rate * 0.5}px) rotate(${scrolled * 0.1}deg)`;
-        }
-    }, 16));
+    });
 
     // Typing effect for hero title (optional enhancement)
     function typeWriter(element, text, speed = 50) {
@@ -188,52 +154,16 @@ document.addEventListener('DOMContentLoaded', function () {
         type();
     }
 
-    // Enhanced scroll indicator and progress
+    // Enhanced scroll indicator
     const scrollIndicator = document.querySelector('.scroll-indicator');
-    const heroStats = document.querySelectorAll('.stat-number');
 
-    // Animate stats numbers when they come into view
-    const animateStats = () => {
-        heroStats.forEach(stat => {
-            const target = parseInt(stat.textContent);
-            const increment = target / 50;
-            let current = 0;
-            
-            const timer = setInterval(() => {
-                current += increment;
-                if (current >= target) {
-                    stat.textContent = stat.textContent.includes('+') ? target + '+' : target;
-                    clearInterval(timer);
-                } else {
-                    stat.textContent = Math.floor(current) + (stat.textContent.includes('+') ? '+' : '');
-                }
-            }, 30);
-        });
-    };
-
-    // Trigger stats animation when hero section is visible
-    const heroObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                setTimeout(animateStats, 1000);
-                heroObserver.unobserve(entry.target);
-            }
-        });
-    });
-
-    const heroSection = document.querySelector('.hero');
-    if (heroSection) {
-        heroObserver.observe(heroSection);
-    }
-
-    // Scroll progress indicator
-    window.addEventListener('scroll', throttle(function () {
+    window.addEventListener('scroll', function () {
         const scrollPercent = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
 
         if (scrollIndicator) {
             scrollIndicator.style.setProperty('--scroll-percent', scrollPercent + '%');
         }
-    }, 16));
+    });
 
     // Cursor trail effect (optional)
     let mouseX = 0;
@@ -285,33 +215,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     preloadImages();
 
-    // Add loading states and smooth reveal animations
+    // Add loading states
     window.addEventListener('load', function () {
         document.body.classList.add('loaded');
-        
-        // Trigger hero animations
-        setTimeout(() => {
-            const heroElements = document.querySelectorAll('.hero-badge, .hero-greeting, .hero-title, .hero-description, .hero-actions, .hero-stats, .hero-visual');
-            heroElements.forEach((el, index) => {
-                setTimeout(() => {
-                    el.style.opacity = '1';
-                    el.style.transform = 'translateY(0)';
-                }, index * 150);
-            });
-        }, 300);
-    });
-
-    // Add smooth hover effects for interactive elements
-    const interactiveElements = document.querySelectorAll('.btn, .work-card, .skill-category, .timeline-content');
-    
-    interactiveElements.forEach(el => {
-        el.addEventListener('mouseenter', function() {
-            this.style.transform = this.style.transform.replace('translateY(0px)', '') + ' translateY(-4px)';
-        });
-        
-        el.addEventListener('mouseleave', function() {
-            this.style.transform = this.style.transform.replace(' translateY(-4px)', '');
-        });
     });
 
     // Keyboard navigation support
@@ -388,58 +294,6 @@ function createCustomCursor() {
         el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
     });
 }
-
-// Add modern interaction enhancements
-function addModernInteractions() {
-    // Add ripple effect to buttons
-    const buttons = document.querySelectorAll('.btn, .work-nav-btn, .view-project-btn');
-    
-    buttons.forEach(button => {
-        button.addEventListener('click', function(e) {
-            const ripple = document.createElement('span');
-            const rect = this.getBoundingClientRect();
-            const size = Math.max(rect.width, rect.height);
-            const x = e.clientX - rect.left - size / 2;
-            const y = e.clientY - rect.top - size / 2;
-            
-            ripple.style.cssText = `
-                position: absolute;
-                width: ${size}px;
-                height: ${size}px;
-                left: ${x}px;
-                top: ${y}px;
-                background: rgba(255, 255, 255, 0.3);
-                border-radius: 50%;
-                transform: scale(0);
-                animation: ripple 0.6s linear;
-                pointer-events: none;
-            `;
-            
-            this.style.position = 'relative';
-            this.style.overflow = 'hidden';
-            this.appendChild(ripple);
-            
-            setTimeout(() => {
-                ripple.remove();
-            }, 600);
-        });
-    });
-    
-    // Add CSS for ripple animation
-    const style = document.createElement('style');
-    style.textContent = `
-        @keyframes ripple {
-            to {
-                transform: scale(4);
-                opacity: 0;
-            }
-        }
-    `;
-    document.head.appendChild(style);
-}
-
-// Initialize modern interactions
-addModernInteractions();
 
 // Initialize custom cursor if desired
 // createCustomCursor();
